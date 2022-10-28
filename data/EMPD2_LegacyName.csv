@@ -1,0 +1,841 @@
+acc_varname,groupid,LegacyName
+Acanthus,HERB,Acanthaceae
+Acer campestre-type,TRSH,Acer
+Matricaria-type,HERB,Asteraceae undiff.
+Allium-type,HERB,Amaryllidaceae
+Alnus,TRSH,Alnus
+Apiaceae,HERB,Apiaceae
+Artemisia,HERB,Artemisia
+Asparagus,HERB,Asparagaceae
+Asphodelus,HERB,Asphodelaceae
+Astragalus-type,HERB,Fabaceae
+Aster-type,HERB,Asteraceae undiff.
+Betula,TRSH,Betula
+Brassicaceae,HERB,Brassicaceae
+Bupleurum,HERB,Apiaceae
+Carduus,HERB,Asteraceae undiff.
+Carpinus betulus,TRSH,Ostrya.Carpinus
+Carya,TRSH,Carya
+Caryophyllaceae (periporate excl. Paronychioideae),HERB,Caryophyllaceae
+Castanea sativa,TRSH,Castanea
+Centaurium,HERB,Gentianaceae
+Cerastium-type,HERB,Caryophyllaceae
+Cerealia-type,HERB,Poaceae
+Chamaerops humilis,TRSH,Chamaerops
+Chenopodiaceae/Amaranthaceae,HERB,Amaranthaceae
+Asteraceae subf. Cichorioideae,HERB,Asteraceae undiff.
+Cistaceae,HERB,Cistaceae
+Cistus,TRSH,Cistaceae
+Clematis,TRSH,Ranunculaceae
+Centaurea nigra-type,HERB,Asteraceae undiff.
+Plantago coronopus-type,HERB,Plantaginaceae
+Corylus,TRSH,Corylus
+Cyclamen,HERB,Primulaceae
+Cyperaceae,HERB,Cyperaceae
+Daphne,TRSH,Thymelaeaceae
+Daucus,HERB,Apiaceae
+Ephedra fragilis-type,TRSH,Ephedraceae
+Ephedra distachya-type,TRSH,Ephedraceae
+Erica,TRSH,Ericales
+Eucalyptus,TRSH,Eucalyptus
+Euphorbia,HERB,Euphorbiaceae
+Fabaceae,HERB,Fabaceae
+Fagus,TRSH,Fagus
+Falcaria-type,HERB,Apiaceae
+Fraxinus ornus,TRSH,Fraxinus
+Filipendula,HERB,Rosaceae
+Fraxinus angustifolia,TRSH,Fraxinus
+Fraxinus excelsior-type,TRSH,Fraxinus
+Fritillaria,HERB,Liliaceae
+Genista-type,TRSH,Genista
+Gladiolus/Romulea,HERB,Iridaceae
+Hedera,TRSH,Araliaceae
+Helianthemum,HERB,Cistaceae
+Herniaria,HERB,Caryophyllaceae
+Hypericum,HERB,Hypericaceae
+Ilex,TRSH,Ilex
+Jasione montana-type,HERB,Campanulaceae
+Juglans,TRSH,Juglans
+Juniperus communis-type,TRSH,Juniperus
+Lamiaceae,HERB,Lamiaceae
+Plantago lanceolata-type,HERB,Plantaginaceae
+Ligustrum,TRSH,Ligustrum
+Liliaceae-type,HERB,Liliaceae
+Lythrum,HERB,Lythraceae
+Plantago maritima-type,HERB,Plantaginaceae
+Mentha-type,HERB,Lamiaceae
+Mercurialis annua,HERB,Euphorbiaceae
+Odontites-type,HERB,Orobanchaceae
+Olea europaea,TRSH,Olea
+Orlaya,HERB,Apiaceae
+Ostrya/Carpinus orientalis,TRSH,Ostrya.Carpinus
+Papaver,HERB,Papaveraceae
+Paronychia,HERB,Caryophyllaceae
+Peucedanum-type,HERB,Apiaceae
+Phillyrea,TRSH,Phillyrea
+Pinus,TRSH,Pinus
+Pinguicula,HERB,Lentibulariaceae
+Pistacia,TRSH,Pistacia
+Platanus,TRSH,Platanus
+Plantago major,HERB,Plantaginaceae
+Poaceae,HERB,Poaceae
+Populus,TRSH,Populus
+Prunus-type,TRSH,Prunus
+Psoralea bituminosa,HERB,Fabaceae
+Quercus cerris-type,TRSH,Quercus
+Quercus ilex-type,TRSH,Quercus
+Quercus robur-type,TRSH,Quercus
+Ranunculus acris-type,HERB,Ranunculaceae
+Reseda,HERB,Resedaceae
+Rhamnus-type,TRSH,Rhamnus
+Rhamnaceae,TRSH,Rhamnaceae
+Rhus coriaria-type,TRSH,Rhus
+Rosaceae,TRSH,Rosaceae
+Rubiaceae,HERB,Rubiaceae
+Rumex/Oxyria,HERB,Rumex
+Rumex acetosa-type,HERB,Rumex
+Rumex acetosella,HERB,Rumex
+Ruscus,TRSH,Asparagaceae
+Ruta,TRSH,Rutaceae
+Salix,TRSH,Salix
+Sambucus nigra,TRSH,Sambucus
+Sanguisorba minor-type,HERB,Rosaceae
+Scabiosa,HERB,Caprifoliaceae
+Scrophularia-type,HERB,Scrophulariaceae
+Sedum-type,HERB,Crassulaceae
+Silene dioica-type,HERB,Caryophyllaceae
+Sorbus-type,TRSH,Sorbus
+Spergularia-type,HERB,Caryophyllaceae
+Symphytum,HERB,Boraginaceae
+Taxus baccata,TRSH,Taxus
+Thalictrum,HERB,Thalictrum
+Theligonum cynocrambe,HERB,Rubiaceae
+Trifolium pratense-type,HERB,Fabaceae
+Trifolium-type,HERB,Fabaceae
+Trifolium repens-type,HERB,Fabaceae
+Urtica dioica,HERB,Urticaceae
+Urtica dubia-type,HERB,Urticaceae
+Urtica pilulifera,HERB,Urticaceae
+Viburnum,TRSH,Viburnum
+Vicia-type,HERB,Fabaceae
+Vitis,TRSH,Vitaceae
+Larix/Pseudotsuga,TRSH,Larix
+Picea,TRSH,Picea
+Betula nana-type,DWAR,Betula
+Betula pubescens-type,TRSH,Betula
+Ericales (tetrad),DWAR,Ericales
+Silene-type,HERB,Caryophyllaceae
+Senecio-type,HERB,Asteraceae undiff.
+Asteraceae,HERB,Asteraceae undiff.
+Ranunculaceae,HERB,Ranunculaceae
+Campanulaceae,HERB,Campanulaceae
+Onagraceae,HERB,Onagraceae
+Polygonaceae,HERB,Polygonaceae
+Polemonium,HERB,Polemoniaceae
+Rubus,TRSH,Rosaceae
+Abies sibirica,TRSH,Abies
+Pinus sylvestris-type,TRSH,Pinus
+Pinus cembra-type,TRSH,Pinus
+Tilia cordata-type,TRSH,Tilia
+Ulmus/Zelkova,TRSH,Ulmus
+Alnus glutinosa-type,TRSH,Alnus
+Alnus viridis,TRSH,Alnus
+Caprifoliaceae,TRSH,Caprifoliaceae
+Ephedra,TRSH,Ephedraceae
+Asteraceae subf. Asteroideae,HERB,Asteraceae undiff.
+Boraginaceae,HERB,Boraginaceae
+Convolvulaceae,HERB,Convolvulaceae
+Dipsacaceae,HERB,Dipsacaceae
+Geraniaceae,HERB,Geraniaceae
+Plumbaginaceae,HERB,Plumbaginaceae
+Oxalis,HERB,Oxalidaceae
+Plantaginaceae,HERB,Plantaginaceae
+Polemoniaceae,HERB,Polemoniaceae
+Polygala,HERB,Polygalaceae
+Rubus chamaemorus,HERB,Rosaceae
+Scrophulariaceae (colporate-reticulate),HERB,Scrophulariaceae
+Valerianaceae,HERB,Valerianaceae
+Tilia,TRSH,Tilia
+Buxus,TRSH,Buxus
+Quercus,TRSH,Quercus
+Fraxinus,TRSH,Fraxinus
+Pterocarya,TRSH,Pterocarya
+Parrotia persica,TRSH,Parrotia
+Juglans regia,TRSH,Juglans
+Diospyros,TRSH,Diospyros
+Celtis,TRSH,Celtis
+Juniperus-type,TRSH,Juniperus
+Humulus/Cannabis,HERB,Cannabaceae
+Ficus carica,TRSH,Ficus
+Morus alba,TRSH,Morus
+Viscum,TRSH,Santalaceae
+Plantago tenuiflora,HERB,Plantaginaceae
+Veronica-type,HERB,Plantaginaceae
+Solanum nigrum-type,HERB,Solanaceae
+Mercurialis,HERB,Euphorbiaceae
+Ambrosia/Xanthium,HERB,Asteraceae undiff.
+Dipsacus-type,HERB,Caprifoliaceae
+Calystegia,HERB,Convolvulaceae
+Persicaria maculosa-type,HERB,Polygonaceae
+Sambucus ebulus,HERB,Sambucus
+Euphorbia/Mercurialis,HERB,Euphorbiaceae
+Saussurea-type,HERB,Asteraceae undiff.
+Colchicum-type,HERB,Colchicaceae
+Sanicula europaea,HERB,Apiaceae
+Parietaria,HERB,Urticaceae
+Oxyria digyna,HERB,Polygonaceae
+Echium,HERB,Boraginaceae
+Galeopsis-type,HERB,Lamiaceae
+Sinapis-type,HERB,Brassicaceae
+Rumex crispus-type,HERB,Rumex
+Valerianaceae/Dipsacaceae,HERB,Caprifoliaceae
+Secale cereale,HERB,Poaceae
+Hordeum-type,HERB,Poaceae
+Thalictrum flavum-type,HERB,Thalictrum
+Hornungia-type,HERB,Brassicaceae
+Polygonum aviculare-type,HERB,Polygonaceae
+Centaurea,HERB,Asteraceae undiff.
+Fabaceae undiff.,HERB,Fabaceae
+Plantago,HERB,Plantaginaceae
+Ranunculus-type,HERB,Ranunculaceae
+Abies,TRSH,Abies
+Alchemilla,HERB,Rosaceae
+Arbutus,TRSH,Arbutus
+Cannabaceae/Urticaceae,HERB,Cannabaceae
+Asteraceae subf. Carduoideae,HERB,Asteraceae undiff.
+Cedrus,TRSH,Cedrus
+Cupressaceae undiff.,TRSH,Cupressaceae
+Malvaceae,HERB,Malvaceae
+Moraceae,TRSH,Moraceae
+Myrtaceae,TRSH,Myrtaceae
+Papaveraceae,HERB,Papaveraceae
+Polygonum bistorta-type,HERB,Polygonaceae
+Sambucus,TRSH,Sambucus
+Tamarix,TRSH,Tamarix
+Zea mays,HERB,Poaceae
+Abies pinsapo,TRSH,Abies
+Abies marocana,TRSH,Abies
+Viola,HERB,Violaceae
+Genista-group,TRSH,Genista
+Pinus pinaster,TRSH,Pinus
+Pinus halepensis-type,TRSH,Pinus
+Urtica dioica-type,HERB,Urticaceae
+Calluna vulgaris,TRSH,Ericales
+Plantago major/P. media-type,HERB,Plantaginaceae
+Centaurea cyanus-type,HERB,Asteraceae undiff.
+Frangula alnus,TRSH,Frangula
+Melampyrum,HERB,Orobanchaceae
+Linaceae,HERB,Linaceae
+Arctostaphylos uva-ursi,DWAR,Arctostaphylos
+Rhododendron,TRSH,Rhododendron
+Cynomorium,HERB,Delete
+Asphodelus albus-type,HERB,Asphodelaceae
+Lygeum spartum,HERB,Poaceae
+Saxifraga,HERB,Saxifragaceae
+Solanaceae,HERB,Solanaceae
+Valeriana,HERB,Caprifoliaceae
+Geranium,HERB,Geraniaceae
+Myrtus communis,TRSH,Myrtus
+Potentilla-type,HERB,Rosaceae
+Nerium oleander,TRSH,Nerium
+Cucurbitaceae,HERB,Cucurbitaceae
+Phragmites australis-type,HERB,Delete
+Lonicera,TRSH,Caprifoliaceae
+Acacia,TRSH,Acacia
+Crassulaceae,HERB,Crassulaceae
+Erodium,HERB,Geraniaceae
+Araceae,HERB,Araceae
+Berberis,TRSH,Berberidaceae
+Gentianaceae,HERB,Gentianaceae
+Jasminum,TRSH,Oleaceae undiff.
+Smilax,HERB,Smilacaceae
+Primula,HERB,Primulaceae
+Paeonia,HERB,Paeoniaceae
+Tamus communis,HERB,Dioscoreaceae
+Aristolochia,HERB,Aristolochiaceae
+Vaccinium,TRSH,Ericales
+Erica arborea-type,TRSH,Ericales
+Ceratonia siliqua,TRSH,Ceratonia
+Santalaceae,HERB,Santalaceae
+Epilobium,HERB,Onagraceae
+Laburnum-type,TRSH,Laburnum
+Loiseleuria procumbens,DWAR,Ericales
+Arctostaphylos,DWAR,Arctostaphylos
+Juglans nigra,TRSH,Juglans
+Cotinus coggygria,TRSH,Cotinus
+Sambucus nigra/S. racemosa,TRSH,Sambucus
+Aconitum,HERB,Ranunculaceae
+Ambrosia,HERB,Asteraceae undiff.
+Anagallis-type,HERB,Primulaceae
+Anemone nemorosa-type,HERB,Ranunculaceae
+Astrantia-type,HERB,Apiaceae
+Pimpinella major-type,HERB,Apiaceae
+Phyteuma-type,HERB,Campanulaceae
+Cirsium,HERB,Asteraceae undiff.
+Gentiana,HERB,Gentianaceae
+Gentiana pneumonanthe-type,HERB,Gentianaceae
+Gentianella campestris-type,HERB,Gentianaceae
+Lotus-type,HERB,Fabaceae
+Helleborus,HERB,Ranunculaceae
+Lilium,HERB,Liliaceae
+Onobrychis,HERB,Fabaceae
+Polygonum bistorta,HERB,Polygonaceae
+Rhinanthus-type,HERB,Orobanchaceae
+Rosa,TRSH,Rosaceae
+Rumex scutatus-type,HERB,Rumex
+Sanguisorba dodecandra,HERB,Rosaceae
+Sanguisorba officinalis,HERB,Rosaceae
+Saxifragaceae,HERB,Saxifragaceae
+Saxifraga oppositifolia-type,HERB,Saxifragaceae
+Saxifraga stellaris-type,HERB,Saxifragaceae
+Geum-type,HERB,Rosaceae
+Urtica,HERB,Urticaceae
+Verbascum,HERB,Scrophulariaceae
+Resedaceae,HERB,Resedaceae
+Urticaceae/Moraceae,HERB,Urticaceae
+Empetrum nigrum,DWAR,Ericales
+Erica ciliaris-type,DWAR,Ericales
+Leguminosae,HERB,Fabaceae
+Saxifraga cespitosa,HERB,Saxifragaceae
+Linum,HERB,Linaceae
+Trientalis europaea,HERB,Primulaceae
+Pedicularis,HERB,Orobanchaceae
+Sanguisorba-type,HERB,Rosaceae
+Cornus,TRSH,Cornus
+Cannabaceae,TRSH,Cannabaceae
+Cannabis sativa,HERB,Cannabaceae
+Comandra elegans,HERB,Santalaceae
+Euphorbiaceae,HERB,Euphorbiaceae
+Oleaceae,TRSH,Oleaceae undiff.
+Picea abies-type,TRSH,Picea
+Plantago media,HERB,Plantaginaceae
+Primulaceae,HERB,Primulaceae
+Urticaceae,HERB,Urticaceae
+Anagallis arvensis-type,HERB,Primulaceae
+Anagallis tenella-type,HERB,Primulaceae
+Avena/Triticum-type,HERB,Poaceae
+Hippophae rhamnoides,TRSH,Elaeagnaceae
+Humulus lupulus,HERB,Cannabaceae
+Hypericum perforatum-type,HERB,Hypericaceae
+Lamium album-type,HERB,Lamiaceae
+Stellaria holostea,HERB,Caryophyllaceae
+Impatiens,HERB,Balsaminaceae
+Chrysosplenium,HERB,Saxifragaceae
+Lysimachia vulgaris-type,HERB,Primulaceae
+Morus,TRSH,Morus
+Betula/Corylus,TRSH,Betula
+Oenanthe,HERB,Delete
+Pediastrum boryanum var. boryanum,HERB,Delete
+Hottonia palustris,HERB,Delete
+Anchusa/Pulmonaria,HERB,Boraginaceae
+Vaccinium-type,TRSH,Ericales
+Lychnis viscaria-type,HERB,Caryophyllaceae
+Polygonum viviparum,HERB,Polygonaceae
+Sagina,HERB,Caryophyllaceae
+Myrica,TRSH,Myrica
+Narthecium,HERB,Nartheciaceae
+Succisa-type,HERB,Caprifoliaceae
+Rosaceae (non-operculate),TRSH,Rosaceae
+Armeria-type,HERB,Plumbaginaceae
+Tsuga,TRSH,Tsuga
+Cytisus-type,TRSH,Fabaceae
+Colutea arborescens,TRSH,Fabaceae
+Lathyrus-type,HERB,Fabaceae
+Scleranthus,HERB,Caryophyllaceae
+Xanthium,HERB,Asteraceae undiff.
+cf. Camelia sinensis,TRSH,Camellia
+Ballota-type,HERB,Lamiaceae
+Campanula trachelium-type,HERB,Campanulaceae
+Centaurea montana-type,HERB,Asteraceae undiff.
+Centaurea scabiosa-type,HERB,Asteraceae undiff.
+cf. Adoxa moschatellina,HERB,Adoxaceae
+Helianthemum nummularium-type,HERB,Cistaceae
+Helleborus viridis-type,HERB,Ranunculaceae
+Buglossoides arvensis,HERB,Boraginaceae
+Primula veris-type,HERB,Primulaceae
+Prunella-type,HERB,Lamiaceae
+cf. Pulsatilla alpina,HERB,Ranunculaceae
+Rheum,HERB,Polygonaceae
+Rumex aquaticus-type,HERB,Rumex
+Scabiosa argentea,HERB,Caprifoliaceae
+Valeriana officinalis-type,HERB,Caprifoliaceae
+Valeriana saxatilis-type,HERB,Caprifoliaceae
+Aesculus hippocastanum,TRSH,Aesculus
+Alchemilla/Aphanes,HERB,Rosaceae
+Allium ursinum-type,HERB,Amaryllidaceae
+Anethum graveolens,HERB,Apiaceae
+Anthriscus sylvestris-type,HERB,Apiaceae
+Aruncus/Spiraea,HERB,Rosaceae
+Avena-type,HERB,Poaceae
+Carum carvi,HERB,Apiaceae
+Chaerophyllum hirsutum-type,HERB,Apiaceae
+Cornus sanguinea-type,TRSH,Cornus
+Cuscuta europaea-type,HERB,Convolvulaceae
+Eryngium,HERB,Apiaceae
+Fallopia,HERB,Polygonaceae
+Heracleum sphondylium,HERB,Apiaceae
+Mercurialis perennis-type,HERB,Euphorbiaceae
+Meum athamanticum,HERB,Apiaceae
+Oxalis acetosella,HERB,Oxalidaceae
+Pedicularis palustris-type,HERB,Orobanchaceae
+Phacelia,HERB,Boraginaceae
+Rhus-type,TRSH,Rhus
+Sium-type,HERB,Apiaceae
+Solanum dulcamara,HERB,Solanaceae
+Triticum-type,HERB,Poaceae
+Viburnum lantana,TRSH,Viburnum
+Viburnum opulus,TRSH,Viburnum
+Viburnum opulus/V. tinus,TRSH,Viburnum
+Ailanthus,TRSH,Ailanthus
+Bryonia,HERB,Cucurbitaceae
+Lonicera xylosteum-type,TRSH,Caprifoliaceae
+Silene vulgaris-type,HERB,Caryophyllaceae
+Arenaria,HERB,Caryophyllaceae
+Beta,HERB,Amaranthaceae
+Crepis-type,HERB,Asteraceae undiff.
+Convolvulus arvensis-type,HERB,Convolvulaceae
+Coronilla varia,HERB,Fabaceae
+Dianthus/Petrorhagia,HERB,Caryophyllaceae
+Fagopyrum,HERB,Polygonaceae
+Gypsophila repens-type,HERB,Caryophyllaceae
+Hepatica,HERB,Ranunculaceae
+Heracleum,HERB,Apiaceae
+Knautia,HERB,Caprifoliaceae
+Ledum palustre,DWAR,Rhododendron
+Ononis,HERB,Fabaceae
+Pimpinella anisum,HERB,Apiaceae
+Scleranthus annuus,HERB,Caryophyllaceae
+Scleranthus perennis,HERB,Caryophyllaceae
+Sonchus-type,HERB,Asteraceae undiff.
+Tragopogon,HERB,Asteraceae undiff.
+Lathyrus/Vicia-type,HERB,Fabaceae
+Parnassia palustris,HERB,Celastraceae
+Potentilla palustris,HERB,Rosaceae
+Thalictrum alpinum-type,HERB,Thalictrum
+Bruckenthalia spiculifolia,DWAR,Ericales
+Convolvulus,HERB,Convolvulaceae
+Cornus mas,TRSH,Cornus
+Ranunculus serbicus,HERB,Ranunculaceae
+Viburnum/Euonymus,TRSH,Viburnum
+Teucrium,HERB,Lamiaceae
+Andromeda polifolia,DWAR,Ericales
+Arctium,HERB,Asteraceae undiff.
+Carduus-type,HERB,Asteraceae undiff.
+Actaea,HERB,Ranunculaceae
+Crataegus,TRSH,Crataegus
+Empetrum/Ledum,DWAR,Ericales
+Lysimachia nemorum,HERB,Primulaceae
+Pastinaca sativa,HERB,Apiaceae
+Saxifraga granulata-type,HERB,Saxifragaceae
+Tilia platyphyllos-type,TRSH,Tilia
+Orchidaceae,HERB,Orchidaceae
+Salvia-type,HERB,Lamiaceae
+Viola tricolor-type,HERB,Violaceae
+Epipactis,HERB,Orchidaceae
+Medicago sativa-type,HERB,Fabaceae
+Padus avium,TRSH,Prunus
+Colutea,TRSH,Fabaceae
+Jasminum fruticans,HERB,Oleaceae undiff.
+Echinops,HERB,Asteraceae undiff.
+Haplophyllum,HERB,Rutaceae
+Myosotis-type,HERB,Boraginaceae
+Origanum vulgare,HERB,Lamiaceae
+Vinca,HERB,Vinca
+Viscum album,TRSH,Santalaceae
+Bidens-type,HERB,Asteraceae undiff.
+Galium uliginosum,HERB,Rubiaceae
+Libanotis,HERB,Libanotis
+Pyrola-type,DWAR,Ericales
+Plantago maxima,HERB,Plantaginaceae
+Polygonum-type (tricolporate),HERB,Polygonaceae
+Scabiosa ochroleuca,HERB,Caprifoliaceae
+Lythrum portula-type,HERB,Lythraceae
+Cercis siliquastrum,TRSH,Cercis
+Citrus,TRSH,Citrus
+Prosopis,TRSH,Prosopis
+Rhus,TRSH,Rhus
+Alkanna-type,HERB,Boraginaceae
+Anchusa arvensis-type,HERB,Boraginaceae
+Torilis nodosa,HERB,Apiaceae
+Arceuthobium oxycedri,TRSH,Santalaceae
+Carduncellus-type,HERB,Asteraceae undiff.
+Carthamus-type,HERB,Asteraceae undiff.
+Helianthus,HERB,Asteraceae undiff.
+Chardinia/Onopordon,HERB,Asteraceae undiff.
+Capparis,TRSH,Capparis
+Citrullus,HERB,Cucurbitaceae
+Elaeagnaceae,TRSH,Elaeagnaceae
+Glaucium,HERB,Papaveraceae
+Lithospermum officinale,HERB,Boraginaceae
+Matthiola,HERB,Brassicaceae
+Sapotaceae,TRSH,Sapotaceae
+Syringa,TRSH,Syringa
+Trigonella,HERB,Fabaceae
+Verbenaceae,HERB,Verbenaceae
+Aquilegia,HERB,Ranunculaceae
+Adonis vernalis,HERB,Ranunculaceae
+Cardamine-type,HERB,Brassicaceae
+Consolida-type,HERB,Ranunculaceae
+Solanum tuberosum,HERB,Solanaceae
+Cistus monspeliensis-type,TRSH,Cistaceae
+Cistus salvifolius,TRSH,Cistaceae
+Loranthus europaeus,TRSH,Loranthaceae
+Trifolium dubium type,HERB,Fabaceae
+Juncaceae,HERB,Juncaceae
+Sideritis,HERB,Lamiaceae
+Urtica urens,HERB,Urticaceae
+Tribulus terrestris,HERB,Zygophyllaceae
+Robinia pseudacacia,TRSH,Robinia
+Cistus albidus-type,TRSH,Cistaceae
+Osyris alba,TRSH,Santalaceae
+Muscari,HERB,Asparagaceae
+Asphodelus/Asphodeline,HERB,Asphodelaceae
+Humulus/Cannabis sativa,UPHE,Cannabaceae
+Galeopsis/Ballota-type,HERB,Lamiaceae
+Soldanella,HERB,Primulaceae
+Viola odorata-type,HERB,Violaceae
+Anagallis,HERB,Primulaceae
+Anethum,HERB,Apiaceae
+Aphanes,HERB,Rosaceae
+Crocus,HERB,Iridaceae
+Forsythia,TRSH,Oleaceae undiff.
+Hedysarum,HERB,Fabaceae
+Actinidia deliciosa,TRSH,Actinidiaceae
+Linaria-type,HERB,Plantaginaceae
+Ligustrum-type,TRSH,Ligustrum
+Papaver rhoeas-type,HERB,Papaveraceae
+Ranunculus macrophyllus,HERB,Ranunculaceae
+Ricinus communis,TRSH,Euphorbiaceae
+Ornithogalum-type,HERB,Asparagaceae
+Solanum,HERB,Solanaceae
+Urtica membranacea-type,HERB,Urticaceae
+Vicia faba,HERB,Fabaceae
+Cynoglossum-type,HERB,Boraginaceae
+Pinaceae,TRSH,Pinaceae
+Convolvulaceae undiff.,HERB,Convolvulaceae
+Circaea,HERB,Onagraceae
+Oenothera,HERB,Onagraceae
+Plantago atrata-type,HERB,Plantaginaceae
+Calligonum,TRSH,Polygonaceae
+Haloragaceae,UPHE,Delete
+Emex spinosa,HERB,Rumex
+Buddleia,TRSH,Buddleja
+Coriaria myrtifolia,TRSH,Coriariaceae
+Parthenocissus,TRSH,Vitaceae
+Ephedra alata-type,TRSH,Ephedraceae
+Fontanesia philliraeoides,TRSH,Oleaceae undiff.
+Cousinia,HERB,Asteraceae undiff.
+Eremurus,HERB,Asphodelaceae
+Camellia,TRSH,Camellia
+Thymelaeaceae,TRSH,Thymelaeaceae
+*sum,HERB,Delete
+Dryas octopetala,HERB,Rosaceae
+Tofieldia,HERB,Tofieldiaceae
+Androsace,HERB,Primulaceae
+Phlomis,HERB,Lamiaceae
+Trollius europaeus,HERB,Ranunculaceae
+Veratrum,HERB,Melanthiaceae
+Cistus ladanifer-type,TRSH,Cistaceae
+Helianthemum croceum-type,HERB,Cistaceae
+Hypecoum,HERB,Papaveraceae
+Illecebrum verticillatum,HERB,Caryophyllaceae
+Apium,HERB,Apiaceae
+Juglandaceae,TRSH,Juglandaceae
+Ribes,TRSH,Grossulariaceae
+Lactuca-type,HERB,Asteraceae undiff.
+Herniaria-type,HERB,Caryophyllaceae
+Coronilla-type,HERB,Fabaceae
+Onobrychis-type,HERB,Fabaceae
+Plantago albicans,HERB,Plantaginaceae
+Zygophyllaceae,TRSH,Zygophyllaceae
+Magnolia-type,TRSH,Magnolia
+Sabia limoniacea,HERB,Rubiaceae
+Adonis aestivalis-type,HERB,Ranunculaceae
+Agrostemma githago,HERB,Caryophyllaceae
+Corylopsis,TRSH,Hamamelidaceae
+Fagopyrum esculentum,HERB,Polygonaceae
+Gnaphalium-type,HERB,Asteraceae undiff.
+Gratiola officinalis,HERB,Plantaginaceae
+Helleborus niger,HERB,Ranunculaceae
+Iris pseudacorus-type,HERB,Iridaceae
+Linum catharticum,HERB,Linaceae
+Pisum sativum,HERB,Fabaceae
+Primula hirsuta-type,HERB,Primulaceae
+Prunus padus,TRSH,Prunus
+Ranunculus arvensis,HERB,Ranunculaceae
+Sambucus racemosa,TRSH,Sambucus
+Scorzonera laciniata,HERB,Asteraceae undiff.
+Valerianella,HERB,Caprifoliaceae
+Euonymus,TRSH,Euonymus
+Echium/Onosma,HERB,Boraginaceae
+Aesculus,TRSH,Aesculus
+Rutaceae,TRSH,Rutaceae
+Digitalis,HERB,Plantaginaceae
+Larix/Pseudo,TRSH,Larix
+Lychnis flos-cuculi,HERB,Caryophyllaceae
+Petasites,HERB,Asteraceae undiff.
+Amorpha fruticosa,TRSH,Fabaceae
+Cryptomeria-type,TRSH,Cryptomeria
+Elaeagnus,TRSH,Elaeagnus
+Liquidambar,TRSH,Liquidambar
+Aethusa cynapium,HERB,Apiaceae
+Anemone hortensis-type,HERB,Ranunculaceae
+Anthericum,HERB,Asparagaceae
+Campanula medium,HERB,Campanulaceae
+Cistus/Helianthemum,TRSH,Cistaceae
+Linum austriacum-type,HERB,Linaceae
+Lythrum salicaria-type,HERB,Lythraceae
+Minuartia rubra-type/Bufonia,HERB,Caryophyllaceae
+Primula farinosa-type,HERB,Primulaceae
+Thesium,HERB,Santalaceae
+Trinia glauca,HERB,Apiaceae
+Valeriana dioica,HERB,Caprifoliaceae
+Erica tetralix-type,DWAR,Ericales
+Scutellaria-type,HERB,Lamiaceae
+Cornus suecica,TRSH,Cornus
+Euphrasia,HERB,Orobanchaceae
+Linnaea borealis,HERB,Caprifoliaceae
+Montia,HERB,Montiaceae
+Keteeleria,TRSH,Keteleeria
+Epilobium angustifolium-type,HERB,Onagraceae
+Erica carnea,TRSH,Ericales
+Erica umbellata,DWAR,Ericales
+Lonicera periclymenum-type,TRSH,Caprifoliaceae
+Lamiaceae (hexacolpate),HERB,Lamiaceae
+Scrophulariaceae,HERB,Scrophulariaceae
+Fraxinus sogdiana,TRSH,Fraxinus
+Picea schrenkiana,TRSH,Picea
+Elaeagnus type,TRSH,Elaeagnus
+Conium maculatum,HERB,Apiaceae
+Hyoscyamus-type,HERB,Solanaceae
+Roemeria-type,HERB,Papaveraceae
+Salsola kali,HERB,Amaranthaceae
+Glaux maritima,HERB,Primulaceae
+Hyoscyamus,HERB,Solanaceae
+Celastraceae,TRSH,Celastraceae
+Ranunculus arvensis-type,HERB,Ranunculaceae
+Clethra,TRSH,Clethra
+Marrubium,HERB,Lamiaceae
+Fothergilla major,HERB,Fothergilla
+Chimaphila umbellata,HERB,Ericales
+Nigella,HERB,Ranunculaceae
+Helleborus foetidus,HERB,Ranunculaceae
+Anacardiaceae,TRSH,Anacardiaceae
+Betulaceae,TRSH,Betulaceae undiff.
+Capparaceae,TRSH,Capparaceae
+Casuarina,TRSH,Casuarina
+Cotinus,TRSH,Cotinus
+Cotoneaster,TRSH,Rosaceae
+Cuscuta,HERB,Convolvulaceae
+Ficus,TRSH,Ficus
+Iris,HERB,Iridaceae
+Limonium,HERB,Plumbaginaceae
+Nitraria,TRSH,Nitrariaceae
+Arecaceae,TRSH,Arecaceae
+Peganum,HERB,Nitrariaceae
+Phoenix,TRSH,Phoenix
+Styrax,TRSH,Styrax
+Vitex,TRSH,Vitex
+Zygophyllum,TRSH,Zygophyllaceae
+Adonis,HERB,Ranunculaceae
+Adoxa moschatellina,HERB,Adoxaceae
+Aegopodium podagraria,HERB,Apiaceae
+Aellenia-type,HERB,Amaranthaceae
+Agrimonia/Aremonia,HERB,Rosaceae
+Andrachne,DWAR,Phyllanthaceae
+Anisosciadium,HERB,Apiaceae
+Antennaria-type,HERB,Asteraceae undiff.
+Anthyllis,HERB,Fabaceae
+Arnebia,HERB,Boraginaceae
+Asphodeline,HERB,Asphodelaceae
+Athamanta cretensis,HERB,Apiaceae
+Atraphaxis,HERB,Polygonaceae
+Ranunculus aquatilis-type,HERB,Delete
+Betula nana-type,TRSH,Betula
+Indeterminable: unknown,TRSH,Delete
+Betula/Corylus/Myrica,TRSH,Betula
+Calendula,HERB,Asteraceae undiff.
+Callitriche,HERB,Delete
+Calluna vulgaris,DWAR,Ericales
+Caltha palustris,HERB,Delete
+Caltha-type,HERB,Ranunculaceae
+Carlina,HERB,Asteraceae undiff.
+Carpobrotus,HERB,Aizoaceae
+Centranthus,HERB,Caprifoliaceae
+Cerinthe,HERB,Boraginaceae
+Chelidonium majus,HERB,Papaveraceae
+Cicuta virosa,HERB,Apiaceae
+Cistus,HERB,Cistaceae
+Cistus albidus-type,HERB,Cistaceae
+Cistus ladanifer-type,HERB,Cistaceae
+Cistus monspeliensis-type,HERB,Cistaceae
+Conopodium,HERB,Apiaceae
+Conopodium majus,HERB,Apiaceae
+Corema album,HERB,Ericales
+Cornus mas-type,TRSH,Cornus
+Corylus/Myrica,TRSH,Corylus
+Chrozophora,HERB,Euphorbiaceae
+Cryptomeria japonica,TRSH,Cryptomeria
+Cucumis,LIAN,Cucurbitaceae
+Cuscuta,LIAN,Convolvulaceae
+Cuscuta europaea-type,LIAN,Convolvulaceae
+Cyclamen hederifolium,HERB,Primulaceae
+Cynoglossum creticum-type,HERB,Boraginaceae
+Cytinus,HERB,Cytinaceae
+Genista-type,HERB,Genista
+Daphne,DWAR,Thymelaeaceae
+Daphne,HERB,Thymelaeaceae
+Datisca cannabina,HERB,Datiscaceae
+Datura,HERB,Solanaceae
+Digitalis-type,HERB,Plantaginaceae
+Dipsacus fullonum-type,HERB,Caprifoliaceae
+Doronicum,HERB,Asteraceae undiff.
+Drosera,HERB,Delete
+Drosera rotundifolia-type,HERB,Delete
+Ephedra,HERB,Ephedraceae
+Erica,DWAR,Ericales
+Erica arborea-type,DWAR,Ericales
+Erica cinerea,DWAR,Ericales
+Erica cinerea,TRSH,Ericales
+Erica ciliaris-type,TRSH,Ericales
+Ericales (tetrad),TRSH,Ericales
+Fagopyrum tataricum,HERB,Polygonaceae
+Indeterminable: unknown,HERB,Delete
+Frankenia,HERB,Frankeniaceae
+Fumaria,HERB,Papaveraceae
+Galega-type,HERB,Fabaceae
+Gentiana lutea/G. pneumonanthe,HERB,Gentianaceae
+Gentiana nivalis,HERB,Gentianaceae
+Gentiana purpurea,HERB,Gentianaceae
+Geranium pratense-type,HERB,Geraniaceae
+Globularia,HERB,Plantaginaceae
+Hypericum,TRSH,Hypericaceae
+Halimium,DWAR,Cistaceae
+Halimium/Tuberaria,HERB,Cistaceae
+Haplophyllum,TRSH,Rutaceae
+Hedera,LIAN,Araliaceae
+Helianthus-type,HERB,Asteraceae undiff.
+Heliotropium,HERB,Heliotropium
+Herniaria glabra-type,HERB,Caryophyllaceae
+Hibiscus,TRSH,Malvaceae
+Homogyne-type,HERB,Asteraceae undiff.
+Hydrocotyle,HERB,Delete
+Hystrix,HERB,Poaceae
+Inula,HERB,Asteraceae undiff.
+Juniperus oxycedrus-type,TRSH,Juniperus
+Juniperus sabina,TRSH,Juniperus
+Koenigia islandica,HERB,Polygonaceae
+Labiatae (6),HERB,Lamiaceae
+Laburnum anagyroides,TRSH,Laburnum
+Laserpitium latifolium-type,HERB,Apiaceae
+Laserpitium prutenicum,HERB,Apiaceae
+Laurus,TRSH,Laurus
+Lavandula,HERB,Lamiaceae
+Legousia-type,HERB,Campanulaceae
+Leontice,HERB,Berberidaceae
+Ligusticum mutellina,HERB,Apiaceae
+Linnaea borealis,DWAR,Caprifoliaceae
+Linum catharticum-type,HERB,Linaceae
+Linum usitatissimum/L. bienne,HERB,Linaceae
+Lloydia serotina,HERB,Liliaceae
+Lobelia,HERB,Campanulaceae
+Lobelia dortmanna,HERB,Campanulaceae
+Loeflingia,HERB,Caryophyllaceae
+Loiseleuria procumbens,HERB,Ericales
+Lonicera,LIAN,Caprifoliaceae
+Lonicera periclymenum,TRSH,Caprifoliaceae
+Maianthemum bifolium,HERB,Asparagaceae
+Maianthemum/Paris,HERB,Asparagaceae
+Malabaila,HERB,Apiaceae
+Malva sylvestris-type,HERB,Malvaceae
+Medicago littoralis-type,HERB,Fabaceae
+Moehringia-type,HERB,Caryophyllaceae
+Moltkia,HERB,Boraginaceae
+Morus nigra,TRSH,Morus
+Muscari/Veratrum,HERB,Delete
+Myrica,HERB,Myrica
+Myricaria germanica,HERB,Tamaricaceae
+Convallaria-type,HERB,Asparagaceae
+Nicotiana tabacum,HERB,Solanaceae
+Nonea,HERB,Boraginaceae
+Osyris alba,HERB,Santalaceae
+Oxalis stricta,HERB,Oxalidaceae
+Papaver argemone,HERB,Papaveraceae
+Parrotia cf. persica,TRSH,Parrotia
+Parthenocissus,LIAN,Vitaceae
+Paulownia,TRSH,Paulownia
+Pedicularis verticillata-type,HERB,Orobanchaceae
+Persicaria,HERB,Polygonaceae
+Phaseolus,HERB,Fabaceae
+Picea omorika-type,TRSH,Picea
+Pleurospermum-type,HERB,Apiaceae
+Polygala comosa-type,HERB,Polygalaceae
+Polygonum alpinum,HERB,Polygonaceae
+Polygonum cognatum,HERB,Polygonaceae
+Polygonum oxyspermum-type,HERB,Polygonaceae
+Populus tremula-type,TRSH,Populus
+Calligonum-type,HERB,Polygonaceae
+Punica granatum,TRSH,Punica
+Pyrola-type,HERB,Ericales
+Ranunculus sceleratus-type,HERB,Ranunculaceae
+Ranunculus asiaticus,HERB,Ranunculaceae
+Ranunculus ficaria,HERB,Ranunculaceae
+Ranunculus flammula-type,HERB,Ranunculaceae
+Ranunculus glacialis-type,HERB,Ranunculaceae
+Ranunculus lingua,HERB,Ranunculaceae
+Rhododendron,DWAR,Rhododendron
+Rosaceae (operculate),TRSH,Rosaceae
+Salvia officinalis-type,HERB,Lamiaceae
+Salvia officinalis-type,DWAR,Lamiaceae
+Rubus arcticus,HERB,Rosaceae
+Rubus,HERB,Rosaceae
+Rumex alpestris,HERB,Rumex
+Rumex alpinus-type,HERB,Rumex
+Ruscus,DWAR,Asparagaceae
+Sagina procumbens-type,HERB,Caryophyllaceae
+Salix,DWAR,Salix
+Salvia verticillata,HERB,Lamiaceae
+Sanguisorba minor-type,TRSH,Rosaceae
+Saussurea alpina,HERB,Asteraceae undiff.
+Scabiosa columbaria-type,HERB,Caprifoliaceae
+Caprifoliaceae,HERB,Caprifoliaceae
+Scandix pecten-veneris/Caucalis platycarpos,HERB,Apiaceae
+Scorzonera humilis-type,HERB,Asteraceae undiff.
+Flueggea,TRSH,Flueggea
+Sempervivum,HERB,Crassulaceae
+Seseli-type,HERB,Apiaceae
+Solanum nigrum-type,TRSH,Solanaceae
+Spartium junceum,TRSH,Fabaceae
+Swertia perennis,HERB,Gentianaceae
+Thalictrum aquilegiifolium,HERB,Thalictrum
+Thymelaea,DWAR,Thymelaeaceae
+Thymelaeaceae,DWAR,Thymelaeaceae
+Mentha-type,DWAR,Lamiaceae
+Trifolium alpinum-type,HERB,Fabaceae
+Trifolium badium-type,HERB,Fabaceae
+Trifolium montanum,HERB,Fabaceae
+Tuberaria,HERB,Cistaceae
+Tussilago-type,HERB,Asteraceae undiff.
+Umbilicus-type,HERB,Crassulaceae
+Utricularia,HERB,Delete
+Vaccinium,DWAR,Ericales
+Vaccinium-type,DWAR,Ericales
+Valeriana montana-type,HERB,Caprifoliaceae
+Verbena officinalis,HERB,Verbenaceae
+Viburnum/Sambucus,TRSH,Viburnum
+Vitis,LIAN,Vitaceae
+Zizyphus,TRSH,Ziziphus
+Pulsatilla,HERB,Ranunculaceae
+Centaurea alpina-type,HERB,Asteraceae undiff.
+Merendera filifolia-type,HERB,Colchicaceae
+Leucojum-type,HERB,Amaryllidaceae
+Cephalanthus,TRSH,Cephalanthus
+Arctostaphylos alpinus,DWAR,Arctostaphylos
+Myricaria germanica,TRSH,Tamaricaceae
+Ornithopus,HERB,Fabaceae
+Trachycarpus,TRSH,Trachycarpus
+Quercus ithaburensis-type,TRSH,Quercus
+Lavandula,TRSH,Lamiaceae
+Vitex agnus-castus,TRSH,Vitex
+Lithospermum-type,HERB,Boraginaceae
+Fumana,TRSH,Cistaceae
