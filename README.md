@@ -4,6 +4,7 @@ These repository contains the scripts to generate the EUPolMap dataset that you 
 Follow the link for more information.
 
 *** Please cite the software as: ***
+
 Oriani F., Mariethoz G., Chevalier M., EUPollMap: The European atlas of contemporary pollen distribution maps derived from an integrated Kriging interpolation approach, submitted to Earth System Science Data.
 
 ### Usage ###
