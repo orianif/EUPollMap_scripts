@@ -12,7 +12,7 @@ from matplotlib import rc
 font = {'family' : 'DejaVu Sans',
         'size'   : 10}
 rc('font', **font)
-import tools as ft
+import fabio_tools as ft
 from pykrige import OrdinaryKriging
 from osgeo import osr
 #import zipfile
@@ -99,25 +99,7 @@ for i in range(len(p_list)):
 isin_lut2=np.in1d(p_list,lut[:,1])
 p_list=np.delete(p_list,np.logical_not(isin_lut2))
 p_list=np.unique(p_list)
-p_list=np.delete(p_list,66)
-
-## import NEW plants distribution data (only presence data)	
-##https://figshare.com/articles/dataset/Tree_occurrences_at_genus_level/3497888?backTo=/collections/A_high-resolution_pan-European_tree_occurrence_dataset/3288407 
-#
-#pl_name=np.genfromtxt('data/EUForestgenus.csv',delimiter=",",usecols=3,skip_header=1,dtype='str')
-#pl_lon=np.genfromtxt('data/EUForestgenus.csv',delimiter=",",usecols=0,skip_header=1)
-#pl_lat=np.genfromtxt('data/EUForestgenus.csv',delimiter=",",usecols=1,skip_header=1)
-#
-#src = osr.SpatialReference() # source spatial ref objects
-#tgt = osr.SpatialReference() # target spatial ref objects
-#src.ImportFromEPSG(3035) # define spatial references
-#tgt.ImportFromEPSG(4326)
-#transform = osr.CoordinateTransformation(src, tgt) # transformation object
-#for i in range(len(pl_lon)): 
-#    coords_tmp = transform.TransformPoint(pl_lat[i], pl_lon[i])
-#    pl_lat[i]=coords_tmp[0]
-#    pl_lon[i]=coords_tmp[1]
-
+p_list=np.delete(p_list,np.in1d(p_list,['Delete','Diospyros','Libanotis']))
 
 #%% MESHGRID FOR INTERPOLATION
 
@@ -126,9 +108,6 @@ xst=2006492#-10.5#5#-15
 xen=6845416#20#+56
 yst=462152  #31
 yen=5218004 #55#73
-# transform in ETRS89-extended / LCC Europe
-#yst,xst=transform.TransformPoint(yst,xst)[:2]
-#yen,xen=transform.TransformPoint(yen,xen)[:2]
 
 res=25000 # metres
 x=np.arange(xst,xen,res).astype("float")
@@ -140,7 +119,6 @@ f=plt.figure()
 ft.plot_shp('data/CNTR_RG_60M_2020_3034.shp',col="brown") # world boundaries
 plt.scatter(xv,yv,marker='.',label='interpolation grid',s=1) # grid
 plt.scatter(lon,lat,label='pollen') # pollen samples
-#plt.scatter(pl_lon,pl_lat,marker='.',label='plants') # plant samples
 deltax=(xen-xst)*0.05
 deltay=deltax
 plt.axis('equal')
@@ -148,7 +126,6 @@ plt.xlim([xst-deltax,xen+deltax])
 plt.ylim([yen+deltay,yst-deltay])
 plt.legend()
 plt.gca().invert_yaxis()
-# take away point not in the selected grid
 
 # MASK for GRID
 mask=ft.shp_to_mask('data/CNTR_RG_60M_2020_3034.shp',xv,yv)
@@ -201,8 +178,6 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
     plt.axes(ax[0,0])
     plt.imshow(pred,extent=(x[0],x[-1],y[-1],y[0]),vmin=0,vmax=1) # interpolation
     plt.scatter(obs_x,obs_y,c=obs_data,edgecolors="gray",linewidths=0.5,vmin=0,vmax=1,s=10,label="pollen samples") # samples
-#    ft.plot_shp('data/CNTR_RG_60M_2020_4326.shp',col="brown") # world boundaries
-#    plt.axis('equal')
     plt.xlim([xst-deltax,xen+deltax*2.5]) # figure limits
     plt.ylim([yst-deltay*1.2,yen+deltay])
     plt.colorbar() # colorbar
@@ -224,11 +199,7 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
     plt.text(mer1lon[0]+25e3,mer1lat[0],'0°E',rotation=0.0,fontsize=5.5,color='grey')
     plt.plot(mer2lon,mer2lat,'--',linewidth=0.5,color="gray") 
     plt.text(mer2lon[0]+10e3,mer2lat[0],'30°E',rotation=0.0,fontsize=5.5,color='grey')
-    
-
-
-   # ax[0,0].xaxis.get_major_formatter().set_useOffset(False)
-    
+        
     ## variogram
     plt.axes(ax[0,1])
     plt.plot(OK.lags,OK.semivariance, 'r*',label='experimental')
@@ -238,8 +209,7 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
     plt.text(maxlag-190000,(np.min(OK.semivariance)+np.max(OK.semivariance))/3,"model fitting limit",rotation=90,color="gray")
     plt.xlabel('lag [m]')
     plt.ylabel('semivariance')
-    #plt.xlim([0,50])
-    plt.title('b) ' + pname_tmp + ' - Variogram')
+    plt.title('b) ' + pname_tmp + ' - Semivariogram')
     ax[0,1].ticklabel_format(style='scientific',scilimits=[0,3],useMathText=True)
     plt.legend()
     
@@ -248,22 +218,10 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
     plt.axes(ax[1,0])
     p=[0,0.2,0.40,0.50,0.60,0.8,1]#np.mean(obs_data)
     pred_th=np.ma.copy(pred)
-#    pred_th[pred<p[1]]=p[0]
-#    pred_th[pred>=p[1]]=p[1]
-#    pred_th[pred>=p[2]]=p[2]
-#    pred_th[pred>=p[3]]=p[3]
-    # impose pixels containing 1-data = 1
-#    for k in range(len(obs_data)): # impose pixels containing 1-data = 1
-#        if obs_data[k]==1:
-#            indx = np.argmin(np.abs(obs_x[k]-x))
-#            indy = np.argmin(np.abs(obs_y[k]-y))
-#            if np.abs(obs_x[k]-x[indx])<res/2 and np.abs(obs_y[k]-y[indy])<res/2: # if point is not outside the domain
-#                pred_th[indy,indx]=p[-1]
     pred_th.mask=pred.mask
     cmap = mpl.cm.viridis
     norm = mpl.colors.BoundaryNorm(p, cmap.N)
     plt.imshow(pred_th,extent=(x[0],x[-1],y[-1],y[0]),cmap=cmap,norm=norm) #
-#    plt.pcolormesh(x,y,pred_th,norm=norm, cmap=cmap) # interpolation
     
     # parallels and meridians
     plt.plot(par1lon,par1lat,'--',linewidth=0.5,color="gray") 
@@ -285,17 +243,13 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
     ax[1,0].text(1.1e6,-50300,'$\\times\\mathdefault{10^{6}}\\mathdefault{}$')
     ax[1,0].yaxis.get_offset_text().set_visible(False)
     ax[1,0].xaxis.get_offset_text().set_visible(False)
-#    pl    # indicator kriging mean
 
     #% kriging variance
     plt.axes(ax[1,1])
-    #p=np.mean(obs_data)
     plt.imshow(ss,extent=(x[0],x[-1],y[-1],y[0]),vmin=np.quantile(ss[np.logical_not(ss.mask)],0.01),vmax=np.quantile(ss[np.logical_not(ss.mask)],0.99)) # interpolation
     plt.colorbar() # colorbar
     plt.scatter(obs_x,obs_y,c=obs_data,edgecolors="gray",linewidths=0.5,vmin=0,vmax=1,s=10,label="pollen samples") # samples
-#    plt.scatter(obs_x,obs_y,label='pollen data')#,c=obs_data,edgecolors="k",vmin=0,vmax=1) # samples
-#    ft.plot_shp('data/CNTR_RG_60M_2020_4326.shp',col="brown") # world boundaries
-#    plt.axis('equal')
+
     # parallels and meridians
     plt.plot(par1lon,par1lat,'--',linewidth=0.5,color="gray") 
     plt.text(par1lon[0],par1lat[0],'40°N',rotation=-15.0,fontsize=5.5,color='grey')
@@ -333,16 +287,6 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
     im2[im1>=p[0]]=p[1]
     for i in range(1,len(p)-1):
         im2[im1>p[i]]=p[i+1]
-        plt.figure()
-        plt.imshow(im2,vmin=0,vmax=1)
-        
-        
-#    for k in range(len(obs_data)): # impose pixels containing 1-data = 1
-#        if obs_data[k]==1:
-#            indx = np.argmin(np.abs(obs_x[k]-x))
-#            indy = np.argmin(np.abs(obs_y[k]-np.flip(y)))
-#            if np.abs(obs_x[k]-x[indx])<=res/2 and np.abs(obs_y[k]-np.flip(y)[indy])<=res/2: # if point is not outside the domain
-#                im2[indy,indx]=p[-1]
                 
     im2[im1==-999]=-999 # put back no data values
     
@@ -358,22 +302,11 @@ def plot_save_fig(pred,ss,obs_x,obs_y,obs_data,OK,pname_tmp):
                  yres=res,
                  epsg=3034,
                  dtype='float32',
-                 nodata_val=[-999,-999,-999],
+                 nodata_val=-999,
                  band_name=['Occurrence probability (Kriging mean)','Occurrence map (<= probability thresholds)','Occurrence uncertainty (Kriging variance)']
                  )
     # WRITE POINT DATA SHAPEFILE
     ft.write_point_shp('export/dataset/' + pname_tmp +'/' + pname_tmp ,obs_x,obs_y,['POLLEN_PRESENCE'],['L'],[obs_data],esri_code=3034)
-
-#    # zip file for shp files
-#        new_file = 'export/shp_files/' + pname_tmp + '.zip'
-#    zipf = zipfile.ZipFile(new_file, 'w', zipfile.ZIP_DEFLATED)
-#    for file in [pname_tmp + '.shp',
-#                 pname_tmp + '.dbf',
-#                 pname_tmp + '.shx',
-#                 pname_tmp + '.prj']:
-#            zipf.write(file,file)
-#            os.remove(file)
-#    zipf.close()
 
 def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od costant field (no interpolation)
     pred=np.ma.empty_like(mask)*c
@@ -389,8 +322,6 @@ def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od co
     plt.axes(ax[0,0])
     plt.imshow(pred,extent=(x[0],x[-1],y[-1],y[0]),vmin=0,vmax=1) # interpolation
     plt.scatter(obs_x,obs_y,c=obs_data,edgecolors="gray",linewidths=0.5,vmin=0,vmax=1,s=10,label="pollen samples") # samples
-#    ft.plot_shp('data/CNTR_RG_60M_2020_4326.shp',col="brown") # world boundaries
-#    plt.axis('equal')
     plt.xlim([xst-deltax,xen+deltax*2.5]) # figure limits
     plt.ylim([yst-deltay*1.2,yen+deltay])
     plt.colorbar() # colorbar
@@ -410,7 +341,7 @@ def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od co
     plt.xlabel('lag [m]')
     plt.ylabel('semivariance')
     plt.xlim([0,50])
-    plt.title('b) ' + pname_tmp + ' - Variogram')
+    plt.title('b) ' + pname_tmp + ' - Semivariogram')
     plt.legend()
     
     
@@ -418,29 +349,12 @@ def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od co
     plt.axes(ax[1,0])
     p=[0,0.2,0.40,0.50,0.60,0.8,1];#np.mean(obs_data)
     pred_th=np.ma.copy(pred)
-#    pred_th[pred<p[1]]=p[0]
-#    pred_th[pred>=p[1]]=p[1]
-#    pred_th[pred>=p[2]]=p[2]
-#    pred_th[pred>=p[3]]=p[3]
-    # impose pixels containing 1-data = 1
-#    for k in range(len(obs_data)): # impose pixels containing 1-data = 1
-#        if obs_data[k]==1:
-#            indx = np.argmin(np.abs(obs_x[k]-x))
-#            indy = np.argmin(np.abs(obs_y[k]-y))
-#            if np.abs(obs_x[k]-x[indx])<res/2 and np.abs(obs_y[k]-y[indy])<res/2: # if point is not outside the domain
-#                pred_th[indy,indx]=p[-1]
-#    pred_th.mask=pred.mask
     cmap = mpl.cm.viridis
     norm = mpl.colors.BoundaryNorm(p, cmap.N)
     plt.imshow(pred_th,extent=(x[0],x[-1],y[-1],y[0]),cmap=cmap,norm=norm) #
-#    plt.pcolormesh(x,y,pred_th,norm=norm, cmap=cmap) # interpolation
     plt.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap),)
-#    plt.scatter(pl_lon[pl_name==pname_tmp],pl_lat[pl_name==pname_tmp],marker='.',c='r',s=1,label='plant data')
-#    plt.axis('equal')
     plt.xlim([xst-deltax,xen+deltax*2.5]) # figure limits
     plt.ylim([yst-deltay*1.2,yen+deltay])
-#    plt.colorbar() # colorbar
-#    plt.legend(loc='upper left')
     plt.title('d) ' + pname_tmp + ' - Occurrence map (probability thresholds)')
     plt.xlabel('easting [m]')
     plt.ylabel('northing [m]')
@@ -451,13 +365,9 @@ def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od co
     
     #% kriging variance
     plt.axes(ax[1,1])
-    #p=np.mean(obs_data)
     plt.imshow(ss,extent=(x[0],x[-1],y[-1],y[0]),vmin=np.quantile(ss[np.logical_not(ss.mask)],0.01),vmax=np.quantile(ss[np.logical_not(ss.mask)],0.99)) # interpolation
     plt.colorbar() # colorbar
     plt.scatter(obs_x,obs_y,c=obs_data,edgecolors="gray",linewidths=0.5,vmin=0,vmax=1,s=10,label="pollen samples") # samples
-#    plt.scatter(obs_x,obs_y,label='pollen data')#,c=obs_data,edgecolors="k",vmin=0,vmax=1) # samples
-#    ft.plot_shp('data/CNTR_RG_60M_2020_4326.shp',col="brown") # world boundaries
-#    plt.axis('equal')
     plt.xlim([xst-deltax,xen+deltax*2.5]) # figure limits
     plt.ylim([yst-deltay*1.2,yen+deltay])
     plt.title('d) ' + pname_tmp + ' - Occurrence uncertainty (Kriging variance)')
@@ -485,13 +395,6 @@ def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od co
     im2[im1>=p[0]]=p[1]
     for i in range(1,len(p)-1):
         im2[im1>p[i]]=p[i+1]
-        
-#    for k in range(len(obs_data)): # impose pixels containing 1-data = 1
-#        if obs_data[k]==1:
-#            indx = np.argmin(np.abs(obs_x[k]-x))
-#            indy = np.argmin(np.abs(obs_y[k]-np.flip(y)))
-#            if np.abs(obs_x[k]-x[indx])<=res/2 and np.abs(obs_y[k]-np.flip(y)[indy])<=res/2: # if point is not outside the domain
-#                im2[indy,indx]=p[-1]
                 
     im2[im1==-999]=-999 # put back no data values
     
@@ -507,22 +410,12 @@ def plot_save_cost(c,obs_x,obs_y,obs_data,pname_tmp): # save image in case od co
                  yres=res,
                  epsg=3034,
                  dtype='float32',
-                 nodata_val=[-999,-999,-999],
+                 nodata_val=-999,
                  band_name=['Occurrence probability (Kriging mean)','Occurrence map (<= probability thresholds)','Occurrence uncertainty (Kriging variance)']
                  )
     # WRITE POINT DATA SHAPEFILE
     ft.write_point_shp('export/dataset/' + pname_tmp +'/' + pname_tmp ,obs_x,obs_y,['POLLEN_PRESENCE'],['L'],[obs_data],esri_code=3034)
 
-#    # zip file for shp files
-#        new_file = 'export/shp_files/' + pname_tmp + '.zip'
-#    zipf = zipfile.ZipFile(new_file, 'w', zipfile.ZIP_DEFLATED)
-#    for file in [pname_tmp + '.shp',
-#                 pname_tmp + '.dbf',
-#                 pname_tmp + '.shx',
-#                 pname_tmp + '.prj']:
-#            zipf.write(file,file)
-#            os.remove(file)
-#    zipf.close()
 
 #%% DEFINE INTERPOLATION FUNCTION
 ss_tot=np.empty((np.shape(mask)[0],np.shape(mask)[1],np.shape(p_list)[0]))*0
@@ -536,7 +429,6 @@ def interp(p_list,j):
         print('no pollen data present for ' + pname_tmp)
         return
     else:
-#        print('computing extended database (including 0 counts) for ' + pname_tmp)
         pcount_tmp=np.empty(np.size(sname))*np.nan
         for i in range(np.size(sname)):
             ind=np.logical_and(psample==sname[i],pname==pname_tmp)
@@ -573,9 +465,9 @@ def interp(p_list,j):
             print('All pollen data in the interpolation area are 0')
             plot_save_cost(0,obs_x,obs_y,obs_data,pname_tmp)
             f=np.empty([1,10])*np.nan
-            f[0]=0
+            f[0]=1
         
-        elif  np.all(obs_data==1):
+        elif np.all(obs_data==1):
             print('All pollen data in the interpolation area are 1')
             plot_save_cost(1,obs_x,obs_y,obs_data,pname_tmp)
             f=np.empty([1,10])*np.nan
@@ -584,11 +476,9 @@ def interp(p_list,j):
         else:            
 
             #% OPTIMIZE ISO KRIGING VARIOGRAM TYPE
-#            print('optimizing variogram type and params')
             mtype,mparams=ft.vario_optim(obs_x,obs_y,obs_data,nlags=20,q=0.80,lagseq='lin',plot=False)
             
             # EXECUTE KRIGING
-#            print('computing OK')
             OK = OrdinaryKriging(obs_x, 
                      obs_y, 
                      obs_data, #x,y,value
@@ -622,41 +512,66 @@ def interp(p_list,j):
             c_y=obs_y[c_ind].copy()
             c_data=obs_data[c_ind].copy()           
     
-            #% OPTIMIZE ISO KRIGING VARIOGRAM TYPE
-#            print('optimizing variogram type and params')
-            mtype,mparams=ft.vario_optim(c_x,c_y,c_data,nlags=20,q=0.9,lagseq='lin',plot=False)
+            # check if all data 0 or 1
+            if np.all(c_data==0):
+                f=np.empty([1,10])*np.nan
+                f[0,0]=1
             
-            # EXECUTE KRIGING
-#            print('computing OK')
-            OK = OrdinaryKriging(c_x, 
-                     c_y, 
-                     c_data, #x,y,value
-                     variogram_model=mtype, #estimator.best_estimator_.variogram_model,#'gaussian',#'spherical',#'exponential',
-                     variogram_parameters=mparams,
-                     nlags=20,
-                     verbose=False,
-                     enable_plotting=False,
-                     enable_statistics=False
-                     )
-            
-            # apply interpolator
-            pred, ss = OK.execute('masked',x,y,mask=np.logical_not(mask))
-            
-            # reliability plot
-            pred_p=ft.extract_grid_points(np.flipud(pred),x[0]-res/2,y[0]-res/2,res,res,ref_x,ref_y,plot_xy=False) # co-located dem cells
-            qc,f=ft.reliability(pred_p,ref_data,10,plot=False)
+            elif np.all(c_data==1):
+                f=np.empty([1,10])*np.nan
+                f[0,-1]=1
+                
+            else:            
+                #% OPTIMIZE ISO KRIGING VARIOGRAM TYPE
+                mtype,mparams=ft.vario_optim(c_x,c_y,c_data,nlags=20,q=0.9,lagseq='lin',plot=False)
+                
+                # EXECUTE KRIGING
+                OK = OrdinaryKriging(c_x, 
+                         c_y, 
+                         c_data, #x,y,value
+                         variogram_model=mtype, #estimator.best_estimator_.variogram_model,#'gaussian',#'spherical',#'exponential',
+                         variogram_parameters=mparams,
+                         nlags=20,
+                         verbose=False,
+                         enable_plotting=False,
+                         enable_statistics=False
+                         )
+                
+                # apply interpolator
+                pred, ss = OK.execute('masked',x,y,mask=np.logical_not(mask))
+                
+                # reliability plot
+                pred_p = ft.extract_grid_points(np.flipud(pred),x[0]-res/2,y[0]-res/2,res,res,ref_x,ref_y,plot_xy=False) # co-located dem cells
+                qc,f = ft.reliability(pred_p,ref_data,10,plot=False)
+        
         f_tot[j,:]=f.copy()
-            
-            
         print('done!')
     
-#%% PARALLEL LOOP  
+#%% FOR LOOP  
 
-nj=1 # number of parallel jobs
+# UNCOMMENT to initialize saved matricies and counter
+n = 0
+np.save('f_tot.npy',f_tot)
+np.save('ss_tot.npy',ss_tot)
+np.save('counter.npy',n)
 
-Parallel(n_jobs=nj,backend="threading")(delayed(interp)(p_list,j) for j in range(len(p_list)))
+# load latest saved matricies and counter to resume script (initialization must be commented)
+n = np.load('counter.npy')
+f_tot = np.load('f_tot.npy')
+ss_tot = np.load('ss_tot.npy')
 
-#% save output
+for j in range(n,len(p_list)):
+    
+    # intepolate pollen for j-th taxum
+    interp(p_list,j)
+    
+    # save updated matricies and counter
+    np.save('f_tot.npy',f_tot)
+    np.save('ss_tot.npy',ss_tot)
+    n= n+1
+    np.save('counter.npy',n)
+               
+#% save final matricies and counter
 f_tot2=np.array(f_tot).T
 np.save('ss_tot.npy',ss_tot)
 np.save('f_tot.npy',f_tot2)

@@ -353,93 +353,94 @@ def vario_optim(obs_x,obs_y,obs_data,nlags=20,q=1,lagseq='lin',plot=False):
     mn=[] # model name
     
     
-    # LINEAR MODEL
-    try:
-        # optimize params: slope,nugget
-        initialParameters = np.array([0, v[0]])
-        lowerBounds = (0,0)#(-np.Inf,-np.Inf)
-        upperBounds = (np.Inf,np.Inf)
-        parameterBounds = [lowerBounds, upperBounds]
-        fittedParams, pcov = curve_fit(linVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
-        slope, nugget = fittedParams # fitted params
-        fp.append(np.copy(fittedParams))
-        vv=linVario(lags,slope, nugget) # # fitted function
-        mv.append(vv) # fitted function
-        err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
-        mn.append('linear')
-    except: 
-        pass
+    # # LINEAR MODEL
+    # try:
+    #     # optimize params: slope,nugget
+    #     initialParameters = np.array([0, v[0]])
+    #     lowerBounds = (0,0)#(-np.Inf,-np.Inf)
+    #     upperBounds = (np.Inf,np.Inf)
+    #     parameterBounds = [lowerBounds, upperBounds]
+    #     fittedParams, pcov = curve_fit(linVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
+    #     slope, nugget = fittedParams # fitted params
+    #     fp.append(np.copy(fittedParams))
+    #     vv=linVario(lags,slope, nugget) # # fitted function
+    #     mv.append(vv) # fitted function
+    #     err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
+    #     mn.append('linear')
+    # except: 
+    #     pass
     
-    # POWER MODEL
-    try:
-        # optimize params: scale, exponent, nugget
-        initialParameters = np.array([0, 1,v[0]])
-        lowerBounds = (0,0,0) #(-np.Inf,-np.Inf,-np.Inf)
-        upperBounds = (np.Inf,2,np.Inf)
-        parameterBounds = [lowerBounds, upperBounds]
-        fittedParams, pcov = curve_fit(powerVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
-        scale, exponent, nugget = fittedParams # fitted params
-        fp.append(np.copy(fittedParams))
-        vv=powerVario(lags,scale,exponent,nugget) # fitted function
-        mv.append(vv) # fitted function
-        err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
-        mn.append('power')
-    except: 
-        pass
+    # # POWER MODEL
+    # try:
+    #     # optimize params: scale, exponent, nugget
+    #     initialParameters = np.array([0, 1,v[0]])
+    #     lowerBounds = (0,0,0) #(-np.Inf,-np.Inf,-np.Inf)
+    #     upperBounds = (np.Inf,1,np.Inf)
+    #     parameterBounds = [lowerBounds, upperBounds]
+    #     fittedParams, pcov = curve_fit(powerVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
+    #     scale, exponent, nugget = fittedParams # fitted params
+    #     fp.append(np.copy(fittedParams))
+    #     vv=powerVario(lags,scale,exponent,nugget) # fitted function
+    #     mv.append(vv) # fitted function
+    #     err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
+    #     mn.append('power')
+    # except: 
+    #     pass
     
-    # GAUSSIAN MODEL
-    try:
-        # optimize params: psill, range_, nugget
-        initialParameters = np.array([np.var(obs_data)/2,max(lags)/2,v[0]])
-        lowerBounds = (0,0,0)
-        upperBounds = (np.var(obs_data), max(lags), np.var(obs_data))
-        parameterBounds = [lowerBounds, upperBounds]
-        fittedParams, pcov = curve_fit(gaussVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
-        psill, range_, nugget = fittedParams # fitted params
-        fp.append(np.copy(fittedParams))
-        vv=gaussVario(lags,psill, range_, nugget) # fitted function
-        mv.append(vv) # fitted function
-        err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
-        mn.append('gaussian')
-    except:
-        pass
+    # # GAUSSIAN MODEL
+    # try:
+    #     # optimize params: psill, range_, nugget
+    #     initialParameters = np.array([np.var(obs_data)/2,max(lags)/2,v[0]])
+    #     lowerBounds = (0,0,0)
+    #     upperBounds = (np.var(obs_data), max(lags), np.var(obs_data))
+    #     parameterBounds = [lowerBounds, upperBounds]
+    #     fittedParams, pcov = curve_fit(gaussVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
+    #     psill, range_, nugget = fittedParams # fitted params
+    #     fp.append(np.copy(fittedParams))
+    #     vv=gaussVario(lags,psill, range_, nugget) # fitted function
+    #     mv.append(vv) # fitted function
+    #     err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
+    #     mn.append('gaussian')
+    # except:
+    #     pass
     
-    # SPHERICAL MODEL
-    try:       
-        # optimize params: psill, range_, nugget
-        initialParameters = np.array([np.var(obs_data)/2,max(lags)/2,v[0]])
-        lowerBounds = (0,0,0)
-        upperBounds = (np.var(obs_data), max(lags), np.var(obs_data))
-        parameterBounds = [lowerBounds, upperBounds]
-        fittedParams, pcov = curve_fit(spheriVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
-        psill, range_, nugget = fittedParams # fitted params
-        fp.append(np.copy(fittedParams))
-        vv=gaussVario(lags,psill, range_, nugget) # fitted function
-        mv.append(vv) # fitted function
-        err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
-        mn.append('spherical')
-    except:
-        pass
+    # # SPHERICAL MODEL
+    # try:       
+    #     # optimize params: psill, range_, nugget
+    #     initialParameters = np.array([np.var(obs_data)/2,max(lags)/2,v[0]])
+    #     lowerBounds = (0,0,0)
+    #     upperBounds = (np.var(obs_data), max(lags), np.var(obs_data))
+    #     parameterBounds = [lowerBounds, upperBounds]
+    #     fittedParams, pcov = curve_fit(spheriVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
+    #     psill, range_, nugget = fittedParams # fitted params
+    #     fp.append(np.copy(fittedParams))
+    #     vv=gaussVario(lags,psill, range_, nugget) # fitted function
+    #     mv.append(vv) # fitted function
+    #     err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
+    #     mn.append('spherical')
+    # except:
+    #     pass
     
     # EXPONENTIAL MODEL
-    try:
-        # optimize params: psill, range_, nugget
-        initialParameters = np.array([np.var(obs_data)/2,max(lags)/2,v[0]])
-        lowerBounds = (0,0,0)
-        upperBounds = (np.var(obs_data), max(lags), np.var(obs_data))
-        parameterBounds = [lowerBounds, upperBounds]
-        fittedParams, pcov = curve_fit(expVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
-        psill, range_, nugget = fittedParams # fitted params
-        fp.append(np.copy(fittedParams))
-        vv=expVario(lags,psill, range_, nugget)
-        mv.append(vv) # fitted function
-        err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
-        mn.append('exponential')
-    except:
-        pass
+    # try:
+    # optimize params: psill, range_, nugget
+
+    lowerBounds = np.array([0,0,0])
+    upperBounds = np.array([np.max(v), max(lags), np.var(obs_data)])
+    initialParameters = (lowerBounds + upperBounds)/2
+    parameterBounds = [lowerBounds, upperBounds]
+    fittedParams, pcov = curve_fit(expVario, lags, v, initialParameters, bounds = parameterBounds) # fitting
+    psill, range_, nugget = fittedParams # fitted params
+    fp.append(np.copy(fittedParams))
+    vv=expVario(lags,psill, range_, nugget)
+    mv.append(vv) # fitted function
+    err.append(np.sqrt(np.mean((vv-v)*(vv-v)))) # RMSE
+    mn.append('exponential')
+    # except:
+    #     pass
     
-    if len(mn)==0:
-        raise Exception('No model could fit the sample variogram!')
+    # if len(mn)==0:
+    #     raise Exception('No model could fit the sample variogram!')
     
     # PLOT
     if plot==True:
